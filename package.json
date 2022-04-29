@@ -1,0 +1,19 @@
+{
+  "name": "detect-device",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "webpack"
+  },
+  "author": "skport (https://github.com/skport)",
+  "license": "LGPL",
+  "devDependencies": {
+    "google-closure-compiler": "^20220405.0.0",
+    "ts-loader": "^9.2.9",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

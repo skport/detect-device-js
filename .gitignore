@@ -1,0 +1,9 @@
+# VSCode
+*.code-workspace
+
+# npm
+node_modules/
+
+# Private
+environment
+static/html/index_adm.html
