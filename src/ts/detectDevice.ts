@@ -7,7 +7,7 @@ export default class DetectDevice {
         this.browser = new Browser();
     }
 
-    isSmartPhone(): boolean {
+    isSmartphone(): boolean {
         if (
             this.isiPhone() ||
             this.isiPod() ||
@@ -30,7 +30,7 @@ export default class DetectDevice {
 
     isDesktop(): boolean {
         if (
-            !this.isSmartPhone() &&
+            !this.isSmartphone() &&
             !this.isTablet()
         ) {
             return true;

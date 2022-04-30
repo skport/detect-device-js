@@ -5,5 +5,4 @@
 node_modules/
 
 # Private
-environment
-static/html/index_adm.html
+readme-private.md

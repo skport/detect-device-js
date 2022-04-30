@@ -9,7 +9,7 @@ To determine if the UserAgent is iPhone, do the following.
 ### TypeScript
 
 ```
-import DetectDevice from 'src/ts/detectDevice';
+import DetectDevice from './src/ts/detectDevice';
 
 let detectDevice = new DetectDevice();
 
@@ -18,10 +18,14 @@ console.log(
 );
 ```
 
+Dependencies : `./src/ts/browser.ts`
+
 ### Legacy-JavaScript
 
+There is a javascript file that has already been compiled. Please use this.
+
 ```
-<script src="dist/js/detectDevice.js"></script>
+<script src="./dist/js/detectDevice.js"></script>
 <script type="text/javascript">
     console.log(
         detectDevice.cmd.isiPhone()
@@ -31,15 +35,11 @@ console.log(
 
 Example : `./dist/html/index.html`
 
-It can also be used from the CDN.
-
-CDN : https://cdn/js
-
 ## Feature
 
 ### Functions
 - Device Type
-    - `isSmartPhone()`
+    - `isSmartphone()`
     - `isTablet()`
     - `isDesktop()`
 - SmartPhone
