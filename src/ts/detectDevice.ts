@@ -1,4 +1,5 @@
 import { Browser } from './browser';
+import { iosProperty } from './iosProperty';
 
 export default class DetectDevice {
     private browser: Browser;
@@ -6,6 +7,10 @@ export default class DetectDevice {
     constructor() {
         this.browser = new Browser();
     }
+
+    /* ----------------------
+     * Group of device
+     */
 
     isSmartphone(): boolean {
         if (
@@ -38,6 +43,10 @@ export default class DetectDevice {
         return false;
     }
 
+    /* ----------------------
+     * iOS device
+     */
+
     isiPhone(): boolean {
         let u = this.browser.requestUserAgent();
         if (u.indexOf('iPhone') > -1) {
@@ -62,6 +71,10 @@ export default class DetectDevice {
         return false;
     }
 
+    /* ----------------------
+     * Android OS device
+     */
+
     isAndroid(): boolean {
         let u = this.browser.requestUserAgent();
         if (u.indexOf('Android') > -1) {
@@ -84,6 +97,32 @@ export default class DetectDevice {
             return true;
         }
         return false;
+    }
+
+    /* ----------------------
+     * iOS Property
+     */
+
+    requestResolutioniPhone(modelName: Readonly<string>): {width:number, height:number} {
+        const property = new iosProperty();
+
+        type Resolution = {
+            width: number;
+            height: number;
+        }
+        let resolution: Resolution = {
+            width: 0,
+            height: 0
+        };
+
+        for (const key in property.resolutioniPhone) {
+            if (key == modelName) {
+                resolution = property.resolutioniPhone[key];
+                break;
+            }
+        }
+
+        return resolution;
     }
 
 }

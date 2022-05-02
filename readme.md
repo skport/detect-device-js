@@ -18,7 +18,7 @@ console.log(
 );
 ```
 
-Dependencies : `./src/ts/browser.ts`
+Dependencies : `./src/ts/browser.ts`, `./src/ts/iosProperty.ts`
 
 ### Legacy-JavaScript
 
@@ -38,17 +38,33 @@ Example : `./dist/html/index.html`
 ## Feature
 
 ### Functions
-- Device Type
+- Group of device
     - `isSmartphone()`
     - `isTablet()`
     - `isDesktop()`
-- SmartPhone
+- Smartphone
     - `isiPhone()`
     - `isiPod()`
     - `isAndroidMobile()`
 - Tablet
     - `isiPad()`
     - `isAndroidTablet()`
+- iPhone Display Browser Resolution
+    - `requestResolutioniPhone()`
+
+### Get browser resolution for iPhone 13
+
+```
+<script src="./dist/js/detectDevice.js"></script>
+<script type="text/javascript">
+    console.log(
+        detectDevice.cmd.requestResolutioniPhone('13');
+    );
+</script>
+```
+
+If a model not defined is specified, '0' is return.
+Defined iPhone models : `./src/ts/iosProperty.ts`
 
 ## License
 
